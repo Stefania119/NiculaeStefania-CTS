@@ -13,7 +13,7 @@ public class Angajat extends Aplicant{
 		this.ocupatie = ocupatie;
 	}
 	public int getSalariu() {
-		return salariu;
+		return salariu; 
 	}
 	public void setSalariu(int salariu) {
 		this.salariu = salariu;
