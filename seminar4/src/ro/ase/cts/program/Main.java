@@ -2,6 +2,8 @@ package ro.ase.cts.program;
 
 import ro.ase.cts.clase.BrokerTranzactie;
 import ro.ase.cts.clase.LazyBrokerTranzactie;
+import ro.ase.cts.clase.Snur;
+import ro.ase.cts.clase.ceasnic;
 
 public class Main {
 
@@ -21,6 +23,12 @@ public class Main {
 		LazyBrokerTranzactie lazy2=LazyBrokerTranzactie.getInstance("Bianca", 2, 100);
 		System.out.println(lazy1);
 		System.out.println(lazy2);
+		
+		Snur snur1=Snur.getInstance("A", 2, 5);
+		Snur snur2=Snur.getInstance("B", 3, 1);
+		System.out.println(snur1);
+		System.out.println(snur2);
+		
 		
 	}
 }
