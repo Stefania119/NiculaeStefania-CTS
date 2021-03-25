@@ -1,9 +1,14 @@
 package ro.ase.cts.simplefactory.clase;
 
+import ro.ase.cts.simplefactory.clase.Asistent;
+import ro.ase.cts.simplefactory.clase.Brancardier;
+import ro.ase.cts.simplefactory.clase.Medic;
+import ro.ase.cts.simplefactory.clase.PersonalSpital;
+
 public class FactoryPersonal {
 
 	
-	public PersonalSpital getPersonal(TipPersonal tipPersonal,String nume) throws Exception {
+	public ro.ase.cts.simplefactory.clase.PersonalSpital getPersonal(TipPersonal tipPersonal,String nume) throws Exception {
 		switch(tipPersonal) {
 		case MEDIC:{Medic medic=new Medic(nume);
 		return medic;}
