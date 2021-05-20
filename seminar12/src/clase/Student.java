@@ -48,15 +48,18 @@ public class Student {
         if(note.size()>0){
             return suma/note.size();
         }
-        return suma;
+        else {
+        	throw new IllegalArgumentException();
+        }
+       
     }
     
     public boolean areRestante() {
     	for(int nota:note) {
     		if(nota<5) {
-    			return false;
+    			return true;
     		}
     	}
-    	return true;
+    	return false;
     }
 }
