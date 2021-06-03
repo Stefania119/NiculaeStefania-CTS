@@ -4,7 +4,9 @@ import static org.junit.Assert.*;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.experimental.categories.Category;
 
+import categorii.GetPromovabilitateCategory;
 import clase.Grupa;
 import clase.Student;
 import junit.framework.Assert;
@@ -57,6 +59,7 @@ public class TestGrupa {
 		assertNotNull(grupa.getStudenti());
 	}
 	@Test
+	@Category(GetPromovabilitateCategory.class)
 	public void testPromovabilitateCorect() {
 		Grupa grupa=new Grupa(1083);
 		for(int i=0;i<3;i++)
@@ -75,6 +78,7 @@ public class TestGrupa {
 	}
 	
 	@Test
+	@Category(GetPromovabilitateCategory.class)
 	public void testPromovabilitateLimitaInferioara() {
 		Grupa grupa=new Grupa(1083);
 		for(int i=0;i<3;i++)
@@ -87,6 +91,7 @@ public class TestGrupa {
 		}
 	}
 	@Test
+	@Category(GetPromovabilitateCategory.class)
 	public void testPromovabilitateLimitaSuperioara() {
 		Grupa grupa=new Grupa(1083);
 		for(int i=0;i<7;i++) {
@@ -98,6 +103,7 @@ public class TestGrupa {
 		assertEquals(promovabilitate, grupa.getPromovabilitate(),0.1);
 	}
 	@Test(expected=IndexOutOfBoundsException.class)
+	@Category(GetPromovabilitateCategory.class)
 	public void testPromovabilitateConditieEroare() {
 		
 		
@@ -105,6 +111,7 @@ public class TestGrupa {
 		grupa.getPromovabilitate();
 	}
 	@Test(timeout=500)
+	@Category(GetPromovabilitateCategory.class)
 	public void testPromovabilitatePerformance(){
 		
 		grupa.getPromovabilitate();
